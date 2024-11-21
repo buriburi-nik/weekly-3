@@ -1,0 +1,239 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    background-color: rgb(241, 238, 238);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar .upper {
+    background: linear-gradient(to right, black, rgb(239, 74, 74));
+    height: 40px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+  }
+  
+  .navbar .lower ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: black;
+    color: white;
+    list-style: none;
+    height: 50px;
+    padding: 0;
+  }
+  
+  .navbar .lower ul li {
+    display: inline-block;
+  }
+  
+  .navbar .lower input {
+    width: 28rem;
+    padding: 5px;
+    border: 2px solid black;
+  }
+  
+  .navbar .lower input:focus {
+    outline: none;
+    border-color: black;
+  }
+  
+  .navbar .lower button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  .product .background {
+    background-image: url('1bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .product .background .incesption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    max-width: 50%;
+  }
+  
+  .product .background h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .product .background p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Trending Section */
+  .trendings .shoes {
+    background-color: rgb(150, 157, 165);
+    margin: 40px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .trendings .shoes h2 {
+    color: rgb(68, 69, 71);
+    margin-bottom: 20px;
+  }
+  
+  .trendings .shoe-images ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .trendings .shoe-images ul li {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .trendings .shoe-images ul li img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #848181;
+    border-radius: 8px;
+  }
+  
+  /* About Section */
+  .product1{
+    background:linear-gradient(to right ,gray, black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+  .product1 .about {
+    display: flex;
+    gap: 20px;
+    margin: 40px;
+    padding: 20px;
+    background: linear-gradient(to right, black, rgb(231, 60, 60));
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .product1 .about .content {
+    flex: 1;
+    font-size: 1rem;
+  }
+  
+  .product1 .about .content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .product1 .about .content h4 {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .product1 .about .content-ig {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product1 .about .content-ig img {
+    max-width: 80%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .product1 .about .content-ig img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .navbar .lower input {
+      width: 20rem;
+    }
+  
+    .product .background .incesption {
+      max-width: 70%;
+    }
+  
+    .product1 .about {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .product1 .about .content-ig img {
+      margin: 20px 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar .lower ul {
+      gap: 20px;
+    }
+  
+    .navbar .lower input {
+      width: 18rem;
+    }
+  
+    .trendings .shoe-images ul {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .product1 .about {
+      gap: 10px;
+    }
+  
+    .product1 .about .content {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar .lower input {
+      width: 15rem;
+    }
+  
+    .product .background .incesption {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .product1 .about .content {
+      font-size: 0.8rem;
+    }
+  
+    .trendings .shoe-images ul li {
+      max-width: 150px;
+    }
+  }
+  
