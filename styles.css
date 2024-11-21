@@ -6,9 +6,8 @@
   }
   
   body {
-    width: 100%;
+    width: 100vw;
     background-color: rgb(241, 238, 238);
-    font-family: Arial, sans-serif;
   }
   
   /* Navbar */
@@ -21,30 +20,26 @@
   }
   
   .navbar .lower ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     height: 50px;
-    padding: 0;
-  }
-  
-  .navbar .lower ul li {
-    display: inline-block;
+    gap: 40px;
   }
   
   .navbar .lower input {
-    width: 28rem;
-    padding: 5px;
+    width: 28.5rem;
+    padding: 3px;
     border: 2px solid black;
   }
   
   .navbar .lower input:focus {
     outline: none;
-    border-color: black;
+    border: 2px solid black;
   }
   
   .navbar .lower button {
@@ -59,32 +54,32 @@
   .product .background {
     background-image: url('1bg.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     height: 60vh;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
     position: relative;
   }
   
   .product .background .incesption {
     background: rgba(0, 0, 0, 0.6);
+    width: 50vw;
+    height: 25vh;
     padding: 20px;
-    max-width: 50%;
+    margin-left: 70px;
+    margin-top: 150px;
+    position: absolute;
   }
   
-  .product .background h1 {
-    font-size: 2rem;
-    font-weight: bold;
+  .product .background .incesption h1 {
+    font-size: bold;
+    font-weight: 700;
     margin-bottom: 10px;
   }
   
-  .product .background p {
-    font-size: 1rem;
-    line-height: 1.5;
+  .product .background .incesption p {
+    font-size: bold;
+    font-weight: 700;
   }
   
   /* Trending Section */
@@ -92,148 +87,177 @@
     background-color: rgb(150, 157, 165);
     margin: 40px;
     padding: 20px;
-    border-radius: 8px;
   }
   
   .trendings .shoes h2 {
     color: rgb(68, 69, 71);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .trendings .shoe-images ul {
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    gap: 8px;
     list-style: none;
-    padding: 0;
-    justify-content: center;
   }
   
   .trendings .shoe-images ul li {
-    flex: 1;
-    max-width: 200px;
-    text-align: center;
+    width: 13%;
   }
   
   .trendings .shoe-images ul li img {
     width: 100%;
     height: auto;
+    background-color: white;
     object-fit: cover;
-    border: 2px solid #848181;
-    border-radius: 8px;
+    border: 3px solid #848181;
   }
   
   /* About Section */
-  .product1{
-    background:linear-gradient(to right ,gray, black);
+  .product1 {
+    background: linear-gradient(to left, black, grey);
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
   }
+  
   .product1 .about {
-    display: flex;
-    gap: 20px;
-    margin: 40px;
-    padding: 20px;
     background: linear-gradient(to right, black, rgb(231, 60, 60));
+    margin: 30px 100px;
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    box-shadow: 0 0 10px white;
     color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   .product1 .about .content {
-    flex: 1;
-    font-size: 1rem;
-  }
-  
-  .product1 .about .content h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .product1 .about .content h4 {
-    margin-bottom: 10px;
-    line-height: 1.5;
-  }
-  
-  .product1 .about .content-ig {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 50vw;
+    margin: 30px;
+    font-size: 1.3rem;
   }
   
   .product1 .about .content-ig img {
-    max-width: 80%;
+    height: 50%;
+    width: 45%;
+    margin-left: 220px;
+    margin-top: 20px;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 10px 15px 15px white;
     transition: transform 0.3s ease;
   }
   
   .product1 .about .content-ig img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2) translate(-100px, 100px);
     cursor: pointer;
   }
   
   /* Responsive Styles */
-  @media (max-width: 1024px) {
-    .navbar .lower input {
-      width: 20rem;
-    }
-  
+  @media (max-width: 1200px) {
     .product .background .incesption {
-      max-width: 70%;
+      width: 70%;
+      margin-left: 30px;
+      margin-top: 120px;
     }
   
-    .product1 .about {
-      flex-direction: column;
-      text-align: center;
+    .navbar .lower input {
+      width: 22rem;
     }
   
     .product1 .about .content-ig img {
-      margin: 20px 0;
+      width: 50%;
+      margin-left: 180px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .product .background .incesption {
+      width: 70%;
+      margin-left: 30px;
+      margin-top: 120px;
+    }
+  
+    .navbar .lower input {
+      width: 22rem;
+    }
+  
+    .trendings .shoe-images ul li {
+      width: 120px;
+    }
+  
+    .product1 .about .content {
+      font-size: 1.2rem;
+      width: 50vw;
+      margin: 15px;
     }
   }
   
   @media (max-width: 768px) {
     .navbar .lower ul {
-      gap: 20px;
+      flex-direction: row;
+      gap: 15px;
     }
   
     .navbar .lower input {
-      width: 18rem;
+      width: 20rem;
+    }
+  
+    .product .background .incesption {
+      width: 90%;
+      margin-left: 10px;
+      margin-top: 100px;
     }
   
     .trendings .shoe-images ul {
       flex-wrap: wrap;
-      gap: 10px;
     }
   
     .product1 .about {
-      gap: 10px;
+      height: auto;
     }
   
     .product1 .about .content {
-      font-size: 0.9rem;
+      font-size: 1rem;
+      width: 70vw;
+      margin: 10px;
+    }
+  
+    .product1 .about .content-ig img {
+      width: 70%;
+      margin-left: 65px;
     }
   }
   
   @media (max-width: 480px) {
     .navbar .lower input {
-      width: 15rem;
+      width: 18rem;
     }
   
     .product .background .incesption {
-      max-width: 90%;
-      padding: 15px;
+      margin-left: 5px;
+      margin-top: 80px;
+      width: 95%;
+    }
+  
+    .trendings .shoe-images ul li {
+      width: 45%;
+    }
+  
+    .product1 .about {
+      height: auto;
+      margin: 10px 50px;
     }
   
     .product1 .about .content {
       font-size: 0.8rem;
+      width: 50vw;
+      margin: 15px;
     }
   
-    .trendings .shoe-images ul li {
-      max-width: 150px;
+    .product1 .about .content-ig img {
+      width: 90%;
+      margin: auto;
     }
   }
   
